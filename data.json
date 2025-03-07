@@ -1,60 +1,13 @@
 {
-  "role_permissions": {
-    "customer": [
-      {
-        "action": "read",
-        "type": "dog"
-      },
-      {
-        "action": "read",
-        "type": "cat"
-      },
-      {
-        "action": "adopt",
-        "type": "dog"
-      },
-      {
-        "action": "adopt",
-        "type": "cat"
-      }
-    ],
-    "employee": [
-      {
-        "action": "read",
-        "type": "dog"
-      },
-      {
-        "action": "read",
-        "type": "cat"
-      },
-      {
-        "action": "update",
-        "type": "dog"
-      },
-      {
-        "action": "update",
-        "type": "cat"
-      }
-    ],
-    "billing": [
-      {
-        "action": "read",
-        "type": "finance"
-      },
-      {
-        "action": "update",
-        "type": "finance"
-      }
-    ],
-    "guest": [
-      {
-        "action": "read",
-        "type": "cat"
-      },
-      {
-        "action": "read",
-        "type": "finance"
-      }
-    ]
+  "permissions": {
+    "createdoctor": {"action": "create"},
+    "editdoctor": {"action": "edit"},
+    "createpatient": {"action": "create"},
+    "editpatient": {"action": "edit"}
+  },
+  "roles": {
+    "admin": ["createdoctor", "editdoctor", "createpatient", "editpatient"],
+    "doctor": ["createdoctor", "editdoctor"],
+    "patient": ["createpatient", "editpatient"]
   }
 }
