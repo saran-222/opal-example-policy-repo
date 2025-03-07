@@ -1,3 +1,4 @@
+package app.rbac
 # By default, deny requests
 default allow = false
 
